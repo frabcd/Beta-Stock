@@ -73,6 +73,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Install Playwright retry-video helper
+        run: npx playwright install ffmpeg
       - run: npm run test:e2e
         env:
           CI: "1"

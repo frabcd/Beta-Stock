@@ -5,6 +5,8 @@
   <p>A local-first stock simulator for US, Hong Kong, and Mainland China equities, with deterministic synthetic data and an optional server-side DeepSeek research copilot.</p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-8ba4ff.svg)](LICENSE)
+  [![CI](https://github.com/frabcd/Beta-Stock/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/frabcd/Beta-Stock/actions/workflows/ci.yml)
+  [![CodeQL](https://github.com/frabcd/Beta-Stock/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/frabcd/Beta-Stock/actions/workflows/codeql.yml)
   [![Node 22.12+](https://img.shields.io/badge/Node-22.12%2B-63d4b7.svg)](package.json)
   [![Synthetic by default](https://img.shields.io/badge/data-SYNTHETIC%20by%20default-f5b95f.svg)](#data-you-can-trust)
 

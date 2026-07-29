@@ -16,9 +16,9 @@ Record a commit SHA, date, environment, command, result, and artifact path for e
 | Browser and accessibility | `npm run test:e2e` across the documented projects, with console/overflow/keyboard/axe results | Passed locally: 87 applicable tests, 33 intentional project skips, 0 failures |
 | Visual matrix | Current desktop/mobile captures and no-update comparison against approved baselines | Passed locally across desktop 1440/1366/1280 and mobile 390 projects |
 | Blind visual review | An anonymized side-by-side score using the documented benchmark protocol | Passed 29 July 2026: 5/5 wins, 90.6 mapped average, 91 overall, no Beta-Stock hard gate |
-| Windows lifecycle | Setup, start, health, and `.\scripts\Stop-BetaStock.ps1` from `E:\Beta-Stock` | Pending final release run |
-| Clean clone | Install, build, tests, launch, and stop in a new checkout | Pending final release run |
-| Public automation | Default-branch CI, CodeQL, and secret-scanning links | Pending repository publication |
+| Windows lifecycle | Setup, start, health, and `.\scripts\Stop-BetaStock.ps1` from `E:\Beta-Stock` | Passed at `c016f31`: strict E: start, verified health, and safe stop |
+| Clean clone | Install, build, tests, launch, and stop in a new checkout | Passed at `c016f31` from a new GitHub clone with isolated state/cache |
+| Public automation | Default-branch CI, CodeQL, and secret-scanning links | Configured publicly; live CI and CodeQL status is linked by the README badges |
 | Credential incident | Owner confirmation that every previously exposed key is revoked | Requires credential-owner verification; never infer from a clean scan |
 
 ## Screenshot set
@@ -40,6 +40,7 @@ Candidate screenshots are checked in and displayed in the README. The set below 
 
 - Environment: Windows, Node `v22.19.0`, npm `10.9.3`, project and writable QA state on `E:`.
 - Full experiment: `artifacts/experiments/experiment-2026-07-29T03-26-39-674Z.json` (local, ignored), passed all six stages in 6 minutes 29 seconds.
+- Public-clone audit: commit `c016f31643ad8d74fc5598d30cf37c49ccdb31b1` cloned into isolated E:-scoped storage; `npm ci`, lint, typecheck, 29/29 tests, 14/14 security tests, build, strict launcher, verified `SYNTHETIC` health response, and stop all passed.
 - Browser coverage: six routes at 1440×900, 1366×768, 1280×720, and 390×844 where applicable, plus axe, keyboard, reduced motion, console, overflow, lifecycle, loading, disconnected, light-theme, HK/CN-rule, chart-marker, and AI-evidence checks.
 - Integrity manifest: 132 publishable files, 10,167,008 bytes, manifest SHA-256 `8216af89e0bba0815339bbb4c6f23a70337bbd89e3833ab250ad238425736f0d`.
 - Blind result: five wins from five, 90.6/100 mapped average, 91/100 overall market readiness, no Beta-Stock hard gate. See the [dated benchmark record](DESIGN-BENCHMARK.md#dated-blind-result).
