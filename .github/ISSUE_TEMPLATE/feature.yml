@@ -1,0 +1,40 @@
+name: Feature proposal
+description: Propose a focused product, simulator, market-rule, provider, or accessibility improvement.
+title: "[Proposal]: "
+labels: [proposal, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user need before the implementation idea.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed experience
+      description: Include affected screens, states, markets and error paths.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Primary sources or evidence
+      description: Required for exchange rules, fees, sessions, data-provider behavior, or accessibility claims.
+  - type: textarea
+    id: truth
+    attributes:
+      label: Data and AI truthfulness
+      description: Explain provenance, freshness, synthetic/replay/delayed/live labeling, and any AI boundary.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope checks
+      options:
+        - label: I linked a primary source and effective date for any market-rule, fee, session, or provider-behavior claim, or the proposal makes no such claim.
+          required: true
+        - label: This does not route real orders or misrepresent synthetic data as live.
+          required: true
+        - label: This proposal does not copy a competitor asset or distinctive implementation.
+          required: true

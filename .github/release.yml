@@ -1,0 +1,28 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+    authors:
+      - dependabot
+      - dependabot[bot]
+  categories:
+    - title: Highlights
+      labels:
+        - highlight
+    - title: New features
+      labels:
+        - enhancement
+    - title: Market rules and data
+      labels:
+        - market-rules
+        - data-provider
+    - title: Fixes
+      labels:
+        - bug
+        - accessibility
+        - security
+    - title: Maintenance
+      labels:
+        - documentation
+        - dependencies
+        - "*"

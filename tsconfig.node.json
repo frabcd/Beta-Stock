@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "server", "scripts", "tests", "src/domain", "src/components/chartSeries.ts", "src/components/SafeMarkdown.tsx", "src/components/SafeMarkdownParser.ts"]
+}

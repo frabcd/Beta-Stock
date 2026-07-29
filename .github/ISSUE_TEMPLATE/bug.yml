@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a reproducible Beta-Stock problem without account data or secrets.
+title: "[Bug]: "
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping. Never include API keys, cookies, private portfolio data, or licensed datasets.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Include the visible data mode, market, session, currency, and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      placeholder: "1. Start with…\n2. Open…\n3. Submit…"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or version
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include operating system, Node version, browser and whether you used the portable development flow or strict E:-drive launcher.
+      placeholder: "Windows 11; Node 22.x; Edge; strict E:-drive launcher"
+    validations:
+      required: true
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Data classification shown
+      description: The default build should show SYNTHETIC. Choose Unknown if the classification was not visible.
+      options: [SYNTHETIC, REPLAY, DELAYED, LIVE, Unknown]
+    validations:
+      required: true
+  - type: dropdown
+    id: market
+    attributes:
+      label: Market
+      options: [Not market-specific, United States, Hong Kong, Mainland China]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or screenshots
+      description: Remove all secrets and personal data before attaching evidence.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed secrets, personal information, and licensed data.
+          required: true
+        - label: I can reproduce this from the bundled deterministic scenario, or I explained why that is not possible.
+          required: true
